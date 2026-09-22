@@ -1070,7 +1070,8 @@ footer {
 }
 .site-credit {
   position: absolute;
-  right: 2rem;
+  left: 2rem;
+  right: auto;
   bottom: 1.35rem;
   color: rgba(246, 232, 228, 0.62);
   font-size: 0.62rem;
