@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Permanent makeup by Julie in Searcy, Arkansas. Brows, lip blushing, and eyeliner by appointment."
+    />
+    <meta name="theme-color" content="#6f2435" />
+    <title>Everlasting Beauty PMU by Julie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Everlasting Beauty home">
+        <span class="brand-script">Everlasting</span>
+        <span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="sr-only">Menu</span>
+      </button>
+      <nav id="site-nav">
+        <a href="#services">Services</a><a href="#work">Her Work</a><a href="#about">About Julie</a
+        ><a href="#contact" class="nav-cta">Book Now</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">PERMANENT MAKEUP · SEARCY, ARKANSAS</p>
+          <h1>Wake up <em>confident</em><br />every day.</h1>
+          <p class="hero-text">
+            Thoughtfully designed brows, lips, and eyeliner that enhance your natural features—and
+            your confidence.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="tel:+15015930777">Book by Phone</a>
+            <a class="button text-button" href="#work">Explore Julie’s Work <span>→</span></a>
+          </div>
+          <div class="trust-row">
+            <span>Precision</span><i>♥</i><span>Beauty</span><i>♥</i><span>Confidence</span>
+          </div>
+        </div>
+        <div class="hero-portrait reveal">
+          <div class="portrait-frame">
+            <img
+              src="assets/storefront-street-hero.png"
+              alt="Everlasting Beauty PMU sign outside a pastel boutique"
+            />
+          </div>
+          <div class="floating-note"><span>PMU Artist</span><strong>Julie</strong></div>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SIGNATURE SERVICES</p>
+          <h2>Beauty that lasts.</h2>
+          <p>Every new service includes a 6–8 week color-boost touch-up.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-number">01</span>
+            <h3>Brows</h3>
+            <p class="script-accent">Natural. Defined. Perfected.</p>
+            <ul>
+              <li><span>Powder Brow</span><strong>$399</strong></li>
+              <li><span>Combo Brow</span><strong>$440</strong></li>
+              <li><span>Color Correction</span><strong>$400</strong></li>
+            </ul>
+          </article>
+          <article class="service-card featured reveal">
+            <span class="service-number">02</span>
+            <h3>Lips</h3>
+            <p class="script-accent">Beautiful color. Lasting confidence.</p>
+            <ul>
+              <li><span>Lip Blushing</span><strong>$399</strong></li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-number">03</span>
+            <h3>Eyeliner</h3>
+            <p class="script-accent">Enhance. Define. Energize.</p>
+            <ul>
+              <li><span>Top Eyeliner</span><strong>$250</strong></li>
+              <li><span>Bottom Eyeliner</span><strong>$200</strong></li>
+              <li><span>Combo Eyeliner</span><strong>$399</strong></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="portfolio section" id="work">
+        <div class="section-heading light reveal">
+          <p class="eyebrow">REAL CLIENT RESULTS</p>
+          <h2>The Everlasting effect.</h2>
+          <p>Individual results vary. Fresh work may appear deeper or brighter while healing.</p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter portfolio">
+          <button class="filter active" data-filter="all">All</button
+          ><button class="filter" data-filter="brows">Brows</button
+          ><button class="filter" data-filter="lips">Lips</button
+          ><button class="filter" data-filter="eyeliner">Eyeliner</button>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison reveal" data-category="brows">
+            <div class="pair">
+              <figure>
+                <img src="assets/06-1000018065.jpg" alt="Brows before powder brow service" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/07-1000018066.jpg" alt="Brows after powder brow service" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Soft Powder Brows</h3>
+          </article>
+          <article class="comparison reveal" data-category="brows">
+            <div class="pair">
+              <figure>
+                <img src="assets/01-1000018069.jpg" alt="Brows before permanent makeup" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/02-1000018070.jpg" alt="Brows after permanent makeup" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Defined Powder Brows</h3>
+          </article>
+          <article class="comparison reveal" data-category="brows">
+            <div class="pair">
+              <figure>
+                <img
+                  src="assets/balanced-brow-before.jpg"
+                  alt="Brows before balanced permanent makeup design"
+                />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="assets/balanced-brow-after.jpg"
+                  alt="Brows after balanced permanent makeup design"
+                />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Balanced Brow Design</h3>
+          </article>
+          <article class="comparison reveal" data-category="lips">
+            <div class="pair">
+              <figure>
+                <img src="assets/mature-lip-before.jpg" alt="Lips before lip blushing" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/mature-lip-after.jpg" alt="Lips after lip blushing" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Natural Lip Blushing</h3>
+          </article>
+          <article class="comparison reveal" data-category="lips">
+            <div class="pair vertical">
+              <figure>
+                <img src="assets/04-1000018061.jpg" alt="Lips before lip blushing" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/05-1000018062.jpg" alt="Lips immediately after lip blushing" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Rose Lip Blushing</h3>
+          </article>
+          <article class="comparison reveal" data-category="lips">
+            <div class="pair vertical">
+              <figure>
+                <img src="assets/01-1000018079.jpg" alt="Lips before lip blushing" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/02-1000018080.jpg" alt="Lips after lip blushing" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Berry Lip Blushing</h3>
+          </article>
+          <article class="comparison reveal" data-category="eyeliner">
+            <div class="pair">
+              <figure>
+                <img src="assets/06-1000018085.jpg" alt="Eye before permanent eyeliner" />
+                <figcaption>Before</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/07-1000018086.jpg" alt="Eye after permanent eyeliner" />
+                <figcaption>After</figcaption>
+              </figure>
+            </div>
+            <h3>Classic Top Eyeliner</h3>
+          </article>
+        </div>
+        <button class="button outline-light gallery-more" type="button">Show More Results</button>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="about-collage reveal">
+          <img
+            class="artist"
+            src="assets/04-1000018083.jpg"
+            alt="Julie performing a permanent brow service"
+          /><img
+            class="detail"
+            src="assets/03-1000018082.jpg"
+            alt="Permanent makeup procedure detail"
+          /><span class="heart-mark">♥</span>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">MEET YOUR ARTIST</p>
+          <h2>Beauty, designed with care.</h2>
+          <p class="lead">
+            Julie creates permanent makeup that feels polished, personal, and true to you.
+          </p>
+          <p>
+            From the first consultation through the finishing details, each appointment is
+            approached with precision and a thoughtful eye for balance. Her goal is simple: help you
+            feel like your best self every day.
+          </p>
+          <div class="signature">Julie <span>♥</span></div>
+          <a class="button primary" href="tel:+15015930777">Call 501-593-0777</a>
+        </div>
+      </section>
+
+      <section class="booking section" id="contact">
+        <div class="booking-card reveal">
+          <div class="booking-intro">
+            <p class="eyebrow">BY APPOINTMENT ONLY</p>
+            <h2>Let’s talk about your<br /><em>Everlasting</em> look.</h2>
+            <p>
+              Call Julie directly or send a request below. She’ll follow up to answer questions and
+              help you choose the right service.
+            </p>
+            <a class="phone-link" href="tel:+15015930777">501-593-0777</a>
+            <a class="email-link" href="mailto:Everlastingbeauty50@gmail.com"
+              >Everlastingbeauty50@gmail.com</a
+            >
+            <p class="location">Searcy, Arkansas</p>
+            <aside class="deposit-note">
+              <strong>Appointment policy</strong
+              ><span
+                >A $50 nonrefundable deposit is required and will be applied to the total price at
+                the time of service.</span
+              >
+            </aside>
+          </div>
+          <form class="contact-form" name="appointment-request" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="appointment-request" />
+            <div class="field-row">
+              <label>Full name<input type="text" name="name" autocomplete="name" required /></label>
+              <label
+                >Phone number<input type="tel" name="phone" autocomplete="tel" required
+              /></label>
+            </div>
+            <label
+              >Email address <span>(optional)</span
+              ><input type="email" name="email" autocomplete="email"
+            /></label>
+            <label
+              >Service you’re interested in
+              <select name="service" required>
+                <option value="">Choose a service</option>
+                <option>Powder Brow</option>
+                <option>Combo Brow</option>
+                <option>Brow Color Correction</option>
+                <option>Lip Blushing</option>
+                <option>Top Eyeliner</option>
+                <option>Bottom Eyeliner</option>
+                <option>Combo Eyeliner</option>
+                <option>Not sure — I’d like Julie’s recommendation</option>
+              </select>
+            </label>
+            <fieldset>
+              <legend>How should Julie contact you?</legend>
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Call" checked /> Call</label
+              >
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Text" /> Text</label
+              >
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Email" /> Email</label
+              >
+            </fieldset>
+            <label
+              >Questions or details <span>(optional)</span
+              ><textarea
+                name="message"
+                rows="4"
+                placeholder="Tell Julie what you’re hoping to achieve or the best time to reach you."
+              ></textarea>
+            </label>
+            <button class="button cream" type="submit">Send Appointment Request</button>
+            <p class="form-note">
+              Your information is used only to respond to your appointment request.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-script">Everlasting</span
+        ><span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </div>
+      <p>Brows <i>♥</i> Lips <i>♥</i> Eyeliner</p>
+      <p class="fine">© <span id="year"></span> Everlasting Beauty PMU by Julie</p>
+    </footer>
+    <a class="mobile-book" href="tel:+15015930777">Book Now <span>♥</span></a>
+    <div class="lightbox" aria-hidden="true">
+      <button aria-label="Close image">×</button><img alt="Expanded client result" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
