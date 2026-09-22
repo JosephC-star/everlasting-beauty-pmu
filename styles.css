@@ -1018,3 +1018,48 @@ footer i {
     gap: 0.8rem 1.1rem;
   }
 }
+
+/* Mobile overflow guard */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.hero,
+.section,
+.booking-card,
+.booking-intro,
+.contact-form {
+  min-width: 0;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .site-header nav {
+    left: 0;
+    right: auto;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100vw);
+    transition:
+      transform 0.3s,
+      visibility 0s 0.3s;
+  }
+  .site-header nav.open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+  .mobile-book {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
