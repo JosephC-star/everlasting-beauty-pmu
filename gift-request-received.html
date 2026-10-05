@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Everlasting Beauty gift certificate payment instructions." />
+    <meta name="theme-color" content="#8b3650" />
+    <title>Gift Request Received | Everlasting Beauty PMU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="thank-you-page gift-thanks-page">
+    <main class="thank-you-main">
+      <section class="thank-you-card gift-thanks-card" aria-labelledby="gift-thanks-heading">
+        <p class="thank-you-heart" aria-hidden="true">♥</p>
+        <p class="eyebrow">REQUEST RECEIVED</p>
+        <h1 id="gift-thanks-heading">Your gift is<br /><em>almost ready.</em></h1>
+        <p>
+          Send the requested amount to Julie through Cash App and include your request reference
+          in the payment note. Julie will verify payment, create the unique certificate serial
+          number, and email the finished certificate to both the purchaser and recipient.
+        </p>
+
+        <div class="payment-summary">
+          <span>AMOUNT TO SEND</span>
+          <strong id="payment-amount">The amount selected on your request</strong>
+          <span>REQUEST REFERENCE</span>
+          <strong id="payment-reference">Included in Julie’s request email</strong>
+          <span>CASH APP</span>
+          <strong>$Jodawn02</strong>
+        </div>
+
+        <p class="payment-warning">
+          This request reference is not a redeemable certificate number. The certificate becomes
+          valid only after Julie confirms payment and emails its final serial number.
+        </p>
+
+        <div class="thank-you-actions">
+          <a class="button primary" href="/">Return to the Website</a>
+          <a class="button thank-you-call" href="tel:+15015930777">Call Julie</a>
+        </div>
+        <p class="thank-you-location">Everlasting Beauty PMU · Searcy, Arkansas</p>
+      </section>
+    </main>
+    <footer class="thank-you-footer">
+      <a
+        class="site-credit"
+        href="https://clemonswebco.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Designed by <strong>Clemons Web Co.</strong></a>
+    </footer>
+
+    <script>
+      const reference = sessionStorage.getItem("giftRequestReference");
+      const amount = sessionStorage.getItem("giftRequestAmount");
+      if (reference) document.querySelector("#payment-reference").textContent = reference;
+      if (amount) document.querySelector("#payment-amount").textContent = amount;
+    </script>
+  </body>
+</html>
