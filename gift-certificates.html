@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Request an Everlasting Beauty PMU gift certificate for brows, lips, or eyeliner services in Searcy, Arkansas."
+    />
+    <meta name="theme-color" content="#8b3650" />
+    <title>Gift Certificates | Everlasting Beauty PMU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="gift-page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Everlasting Beauty home">
+        <span class="brand-script">Everlasting</span>
+        <span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="sr-only">Menu</span>
+      </button>
+      <nav id="site-nav">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#work">Her Work</a>
+        <a href="/#contact" class="nav-cta">Book Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gift-hero">
+        <div class="gift-hero-copy">
+          <p class="eyebrow">A BEAUTIFUL GIFT, MADE PERSONAL</p>
+          <h1>Gift confidence<br /><em>that lasts.</em></h1>
+          <p>
+            Choose an amount, add a personal message, and Julie will prepare a digital
+            Everlasting Beauty gift certificate after payment is verified.
+          </p>
+          <a class="button primary" href="#gift-request">Request a Certificate</a>
+        </div>
+
+        <div class="certificate-stage" aria-label="Everlasting Beauty gift certificate preview">
+          <article class="certificate-preview">
+            <div class="certificate-flower certificate-flower-one" aria-hidden="true">❀</div>
+            <div class="certificate-flower certificate-flower-two" aria-hidden="true">❀</div>
+            <p class="certificate-brand">Everlasting <span>Beauty</span></p>
+            <p class="certificate-kicker">GIFT</p>
+            <h2>Certificate</h2>
+            <p class="certificate-services">Permanent Makeup Services</p>
+            <div class="certificate-amount">Amount chosen by you</div>
+            <p class="certificate-tagline">Enhance your natural beauty <i>♥</i></p>
+            <p class="certificate-contact">Brows · Lips · Eyeliner<br />501-593-0777</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gift-process section">
+        <div class="section-heading">
+          <p class="eyebrow">SIMPLE & SECURE</p>
+          <h2>How it works.</h2>
+        </div>
+        <div class="gift-steps">
+          <article><span>01</span><h3>Request</h3><p>Choose the value and tell Julie who the gift is for.</p></article>
+          <article><span>02</span><h3>Pay</h3><p>Send the matching amount through Cash App using your request reference.</p></article>
+          <article><span>03</span><h3>Receive</h3><p>After payment is verified, Julie emails the numbered certificate to both addresses.</p></article>
+        </div>
+      </section>
+
+      <section class="gift-order section" id="gift-request">
+        <div class="gift-order-card">
+          <div class="gift-order-intro">
+            <p class="eyebrow">GIFT CERTIFICATE REQUEST</p>
+            <h2>Create their <em>Everlasting</em> gift.</h2>
+            <p>
+              Submitting this form creates a request reference—not a redeemable certificate.
+              Julie will issue the unique certificate serial number after verifying payment.
+            </p>
+            <aside class="cash-app-note">
+              <span>PAYMENT METHOD</span>
+              <strong>Cash App · $Jodawn02</strong>
+              <p>Payment instructions and your request reference appear after submission.</p>
+            </aside>
+          </div>
+
+          <form
+            class="contact-form gift-form"
+            name="gift-certificate-request"
+            method="POST"
+            action="/gift-request-received.html"
+            data-netlify="true"
+            netlify-honeypot="company"
+          >
+            <input type="hidden" name="form-name" value="gift-certificate-request" />
+            <input type="hidden" name="request-reference" id="request-reference" />
+            <p class="sr-only">
+              <label>Leave this field empty<input name="company" /></label>
+            </p>
+
+            <div class="field-row">
+              <label>
+                Purchaser name
+                <input type="text" name="purchaser-name" autocomplete="name" required />
+              </label>
+              <label>
+                Purchaser phone
+                <input type="tel" name="purchaser-phone" autocomplete="tel" required />
+              </label>
+            </div>
+
+            <label>
+              Purchaser email
+              <input type="email" name="purchaser-email" autocomplete="email" required />
+            </label>
+
+            <div class="field-row">
+              <label>
+                Recipient name
+                <input type="text" name="recipient-name" required />
+              </label>
+              <label>
+                Recipient email
+                <input type="email" name="recipient-email" required />
+              </label>
+            </div>
+
+            <label>
+              Certificate amount
+              <select name="certificate-amount" id="certificate-amount" required>
+                <option value="">Choose an amount</option>
+                <option value="$50">$50</option>
+                <option value="$100">$100</option>
+                <option value="$200">$200</option>
+                <option value="Custom">Custom amount</option>
+              </select>
+            </label>
+
+            <label id="custom-amount-wrap" hidden>
+              Custom amount
+              <input
+                type="number"
+                name="custom-amount"
+                id="custom-amount"
+                min="25"
+                step="1"
+                inputmode="decimal"
+                placeholder="$25 minimum"
+              />
+            </label>
+
+            <label>
+              Personal message <span>(optional)</span>
+              <textarea
+                name="gift-message"
+                rows="4"
+                maxlength="300"
+                placeholder="Add a short message for the recipient."
+              ></textarea>
+            </label>
+
+            <button class="button cream" type="submit">Continue to Payment Instructions</button>
+            <p class="form-note">
+              No certificate is valid until Julie confirms payment and emails its unique serial number.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-script">Everlasting</span>
+        <span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </div>
+      <p>Brows <i>♥</i> Lips <i>♥</i> Eyeliner</p>
+      <p class="fine">© <span id="year"></span> Everlasting Beauty PMU by Julie</p>
+      <a
+        class="site-credit"
+        href="https://clemonswebco.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Designed by <strong>Clemons Web Co.</strong></a>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("#site-nav");
+      menuButton.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(open));
+        document.body.classList.toggle("menu-open", open);
+      });
+      nav.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          document.body.classList.remove("menu-open");
+          menuButton.setAttribute("aria-expanded", "false");
+        }),
+      );
+
+      const amountSelect = document.querySelector("#certificate-amount");
+      const customWrap = document.querySelector("#custom-amount-wrap");
+      const customInput = document.querySelector("#custom-amount");
+      amountSelect.addEventListener("change", () => {
+        const custom = amountSelect.value === "Custom";
+        customWrap.hidden = !custom;
+        customInput.required = custom;
+        if (!custom) customInput.value = "";
+      });
+
+      const requestReference = `EBR-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${crypto.randomUUID().slice(0, 6).toUpperCase()}`;
+      document.querySelector("#request-reference").value = requestReference;
+
+      document.querySelector(".gift-form").addEventListener("submit", () => {
+        const amount =
+          amountSelect.value === "Custom" ? `$${customInput.value}` : amountSelect.value;
+        sessionStorage.setItem("giftRequestReference", requestReference);
+        sessionStorage.setItem("giftRequestAmount", amount);
+      });
+
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
