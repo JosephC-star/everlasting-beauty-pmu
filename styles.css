@@ -1513,7 +1513,7 @@ footer {
   min-height: 72px;
   margin: auto;
   display: grid;
-  grid-template-columns: auto minmax(290px, 1fr) auto auto;
+  grid-template-columns: auto minmax(320px, 1fr) minmax(190px, 230px) auto;
   align-items: center;
   gap: clamp(1rem, 3vw, 2.5rem);
 }
@@ -1532,8 +1532,9 @@ footer {
 }
 .seasonal-offer {
   display: flex;
-  align-items: baseline;
-  gap: clamp(0.8rem, 2vw, 1.5rem);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 .seasonal-offer strong {
   font: 400 clamp(1.45rem, 2.7vw, 2.2rem)/1 var(--serif);
