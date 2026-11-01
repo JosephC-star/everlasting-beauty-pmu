@@ -1488,18 +1488,24 @@ footer {
   z-index: 20;
   padding: 0.65rem clamp(1rem, 5vw, 5rem);
   overflow: hidden;
-  color: var(--wine-dark);
-  border-bottom: 1px solid rgba(111, 36, 53, 0.18);
+  color: #4f321d;
+  border-top: 1px solid rgba(180, 126, 43, 0.6);
+  border-bottom: 1px solid rgba(143, 91, 22, 0.62);
   background:
-    radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.9), transparent 23%),
-    linear-gradient(100deg, #f8e2e6 0%, #fff8f8 48%, #f2d2da 100%);
+    linear-gradient(115deg, transparent 0 43%, rgba(255, 255, 255, 0.7) 48%, transparent 53%) 0 0 / 220% 100%,
+    radial-gradient(circle at 18% 45%, rgba(255, 255, 255, 0.85), transparent 25%),
+    linear-gradient(105deg, #c69339 0%, #f4dc93 16%, #fff8db 48%, #e8c268 82%, #b57925 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(86, 50, 13, 0.18),
+    0 7px 20px rgba(84, 46, 12, 0.12);
 }
 .seasonal-special::before,
 .seasonal-special::after {
-  content: "♥";
+  content: "✦";
   position: absolute;
   top: 50%;
-  color: rgba(182, 91, 104, 0.1);
+  color: rgba(105, 65, 18, 0.2);
   font-size: 4.5rem;
   line-height: 1;
   transform: translateY(-50%);
@@ -1516,10 +1522,15 @@ footer {
   grid-template-columns: auto minmax(320px, 1fr) minmax(190px, 230px) auto;
   align-items: center;
   gap: clamp(1rem, 3vw, 2.5rem);
+  padding: 0.28rem clamp(0.75rem, 2vw, 1.4rem);
+  border: 1px solid rgba(126, 78, 18, 0.42);
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -4px;
+  border-radius: 3px;
 }
 .seasonal-special p { margin: 0; }
 .seasonal-kicker {
-  color: var(--wine);
+  color: #704719;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -1527,7 +1538,7 @@ footer {
   white-space: nowrap;
 }
 .seasonal-kicker span {
-  color: var(--rose);
+  color: #9b3154;
   margin-inline: 0.25rem;
 }
 .seasonal-offer {
@@ -1539,9 +1550,11 @@ footer {
 .seasonal-offer strong {
   font: 400 clamp(1.45rem, 2.7vw, 2.2rem)/1 var(--serif);
   white-space: nowrap;
+  color: #4d2c16;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 .seasonal-offer span {
-  color: var(--wine);
+  color: #77491a;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.13em;
@@ -1550,7 +1563,7 @@ footer {
 }
 .seasonal-detail {
   max-width: 210px;
-  color: var(--muted);
+  color: #6c5137;
   font-size: 0.72rem;
   line-height: 1.35;
 }
@@ -1561,8 +1574,9 @@ footer {
   min-height: 38px;
   padding: 0.55rem 1rem;
   color: white;
-  background: var(--wine);
-  border: 1px solid var(--wine);
+  background: linear-gradient(135deg, #74233d, #9e3659);
+  border: 1px solid #652038;
+  box-shadow: 0 5px 14px rgba(84, 29, 47, 0.22);
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.11em;
@@ -1571,8 +1585,8 @@ footer {
   transition: 0.25s ease;
 }
 .seasonal-cta:hover {
-  color: var(--wine);
-  background: white;
+  color: #5c3815;
+  background: #fff7d6;
   transform: translateY(-1px);
 }
 .seasonal-cta span { margin-left: 0.45rem; }
