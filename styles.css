@@ -374,27 +374,42 @@ button {
   margin: auto;
 }
 .comparison {
-  background: #5a1b29;
-  padding: 0.7rem 0.7rem 1.4rem;
-  transition: 0.35s;
+  overflow: hidden;
+  background: linear-gradient(145deg, #641f30, #4c1723);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.7rem 0.7rem 1.25rem;
+  box-shadow: 0 16px 34px rgba(34, 8, 14, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .comparison.hidden {
   display: none;
+}
+.comparison.gallery-collapsed {
+  display: none;
+}
+.comparison:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 42px rgba(34, 8, 14, 0.3);
 }
 .pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.35rem;
-  height: 260px;
 }
 .pair figure {
   position: relative;
+  aspect-ratio: 1 / 1;
   margin: 0;
   overflow: hidden;
 }
 .pair img {
   height: 100%;
   object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.35s ease;
+}
+.pair figure:hover img {
+  transform: scale(1.025);
 }
 .pair.vertical img {
   object-position: center 45%;
@@ -414,8 +429,11 @@ button {
   margin: 1rem 0.6rem 0;
 }
 .gallery-more {
-  display: none;
+  display: flex;
   margin: 2.5rem auto 0;
+}
+.gallery-more[hidden] {
+  display: none;
 }
 .outline-light {
   background: transparent;
@@ -697,18 +715,8 @@ footer i {
     padding: 1.6rem;
     min-height: 0;
   }
-  .pair {
-    height: 185px;
-  }
-  .comparison-grid .comparison:nth-child(n + 5) {
-    display: none;
-  }
-  .comparison-grid.expanded .comparison {
-    display: block;
-  }
-  .gallery-more {
-    display: flex;
-  }
+  .comparison { padding: 0.45rem 0.45rem 1rem; }
+  .comparison h3 { margin-top: 0.75rem; font-size: 1.2rem; }
   .about-collage {
     padding: 0 12% 14% 0;
   }

@@ -12,24 +12,49 @@ nav.querySelectorAll("a").forEach((link) =>
     menuButton.setAttribute("aria-expanded", "false");
   }),
 );
+const grid = document.querySelector(".comparison-grid");
+const more = document.querySelector(".gallery-more");
+const galleryCards = [...document.querySelectorAll(".comparison")];
+const galleryLimit = 4;
+let currentFilter = "all";
+let galleryExpanded = false;
+
+function updateGallery() {
+  const matchingCards = galleryCards.filter(
+    (card) => currentFilter === "all" || card.dataset.category === currentFilter,
+  );
+
+  galleryCards.forEach((card) => {
+    const matches = matchingCards.includes(card);
+    const position = matchingCards.indexOf(card);
+    card.classList.toggle("hidden", !matches);
+    card.classList.toggle(
+      "gallery-collapsed",
+      matches && !galleryExpanded && position >= galleryLimit,
+    );
+  });
+
+  more.hidden = matchingCards.length <= galleryLimit;
+  more.textContent = galleryExpanded ? "Show Fewer Results" : "Show More Results";
+}
+
 document.querySelectorAll(".filter").forEach((button) =>
   button.addEventListener("click", () => {
     document.querySelector(".filter.active")?.classList.remove("active");
     button.classList.add("active");
-    const filter = button.dataset.filter;
-    document
-      .querySelectorAll(".comparison")
-      .forEach((card) =>
-        card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter),
-      );
+    currentFilter = button.dataset.filter;
+    galleryExpanded = false;
+    updateGallery();
   }),
 );
-const grid = document.querySelector(".comparison-grid");
-const more = document.querySelector(".gallery-more");
+
 more.addEventListener("click", () => {
-  const expanded = grid.classList.toggle("expanded");
-  more.textContent = expanded ? "Show Fewer Results" : "Show More Results";
+  galleryExpanded = !galleryExpanded;
+  updateGallery();
+  if (!galleryExpanded) grid.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
+updateGallery();
 const lightbox = document.querySelector(".lightbox");
 document.querySelectorAll(".comparison img").forEach((image) =>
   image.addEventListener("click", () => {
