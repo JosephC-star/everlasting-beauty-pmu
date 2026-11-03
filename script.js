@@ -1,52 +1,86 @@
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#site-nav");
-menuButton.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", open);
-  document.body.classList.toggle("menu-open", open);
-});
-nav.querySelectorAll("a").forEach((link) =>
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    menuButton.setAttribute("aria-expanded", "false");
-  }),
-);
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", open);
+    document.body.classList.toggle("menu-open", open);
+  });
+  nav.querySelectorAll("a").forEach((link) =>
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }),
+  );
+}
+const grid = document.querySelector(".comparison-grid");
+const more = document.querySelector(".gallery-more");
+const galleryCards = [...document.querySelectorAll(".comparison")];
+const galleryLimit = 4;
+let currentFilter = "all";
+let galleryExpanded = false;
+
+function updateGallery() {
+  const matchingCards = galleryCards.filter(
+    (card) => currentFilter === "all" || card.dataset.category === currentFilter,
+  );
+
+  galleryCards.forEach((card) => {
+    const matches = matchingCards.includes(card);
+    const position = matchingCards.indexOf(card);
+    card.classList.toggle("hidden", !matches);
+    card.classList.toggle(
+      "gallery-collapsed",
+      matches && !galleryExpanded && position >= galleryLimit,
+    );
+  });
+
+  if (more) {
+    more.hidden = matchingCards.length <= galleryLimit;
+    more.textContent = galleryExpanded ? "Show Fewer Results" : "Show More Results";
+  }
+}
+
 document.querySelectorAll(".filter").forEach((button) =>
   button.addEventListener("click", () => {
     document.querySelector(".filter.active")?.classList.remove("active");
     button.classList.add("active");
-    const filter = button.dataset.filter;
-    document
-      .querySelectorAll(".comparison")
-      .forEach((card) =>
-        card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter),
-      );
+    currentFilter = button.dataset.filter;
+    galleryExpanded = false;
+    updateGallery();
   }),
 );
-const grid = document.querySelector(".comparison-grid");
-const more = document.querySelector(".gallery-more");
-more.addEventListener("click", () => {
-  const expanded = grid.classList.toggle("expanded");
-  more.textContent = expanded ? "Show Fewer Results" : "Show More Results";
-});
-const lightbox = document.querySelector(".lightbox");
-document.querySelectorAll(".comparison img").forEach((image) =>
-  image.addEventListener("click", () => {
-    lightbox.querySelector("img").src = image.src;
-    lightbox.querySelector("img").alt = image.alt;
-    lightbox.classList.add("open");
-    lightbox.setAttribute("aria-hidden", "false");
-  }),
-);
-function closeLightbox() {
-  lightbox.classList.remove("open");
-  lightbox.setAttribute("aria-hidden", "true");
+
+if (grid && more) {
+  more.addEventListener("click", () => {
+    galleryExpanded = !galleryExpanded;
+    updateGallery();
+    if (!galleryExpanded) grid.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  updateGallery();
 }
-lightbox.querySelector("button").addEventListener("click", closeLightbox);
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) closeLightbox();
-});
+const lightbox = document.querySelector(".lightbox");
+function closeLightbox() {
+  if (lightbox) {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+  }
+}
+if (lightbox) {
+  document.querySelectorAll(".comparison img").forEach((image) =>
+    image.addEventListener("click", () => {
+      lightbox.querySelector("img").src = image.src;
+      lightbox.querySelector("img").alt = image.alt;
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+    }),
+  );
+  lightbox.querySelector("button").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+}
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
@@ -61,4 +95,5 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 },
 );
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-document.querySelector("#year").textContent = new Date().getFullYear();
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
