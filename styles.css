@@ -712,8 +712,48 @@ footer i {
     font-size: 3.2rem;
   }
   .service-card {
-    padding: 1.6rem;
+    padding: 1.15rem 0.9rem;
     min-height: 0;
+  }
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+  .service-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .service-number {
+    font-size: 0.78rem;
+  }
+  .service-card h3 {
+    margin-top: 0.35rem;
+    font-size: clamp(2rem, 9vw, 2.55rem);
+  }
+  .script-accent {
+    min-height: 2.4rem;
+    margin: 0.05rem 0 0.75rem;
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+  .service-card li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.05rem;
+    padding: 0.55rem 0;
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+  .service-card:nth-child(3) ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+  .service-card:nth-child(3) li {
+    border-bottom: 0;
+    border-right: 1px solid rgba(111, 36, 53, 0.14);
+  }
+  .service-card:nth-child(3) li:last-child {
+    border-right: 0;
   }
   .comparison { padding: 0.45rem 0.45rem 1rem; }
   .comparison h3 { margin-top: 0.75rem; font-size: 1.2rem; }
