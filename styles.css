@@ -528,6 +528,72 @@ button {
   background: var(--wine);
   color: white;
 }
+.booking-cta-card {
+  width: min(100%, 820px);
+  margin: auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem);
+  color: white;
+  background: rgba(64, 19, 30, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(4px);
+}
+.booking-cta-card .eyebrow {
+  color: #f2bdc6;
+}
+.booking-cta-card h2 {
+  margin: 0.35rem 0 1rem;
+  color: white;
+}
+.booking-cta-card h2 em,
+.appointment-heading h1 em {
+  color: #f1afb8;
+  font-family: var(--script);
+  font-weight: 400;
+}
+.booking-cta-card > p:not(.eyebrow) {
+  max-width: 610px;
+  margin-inline: auto;
+  color: #f3e5e8;
+}
+.booking-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+.booking-cta-actions .button {
+  min-width: 220px;
+}
+.booking-cta-card .booking-policy {
+  margin-top: 1.4rem;
+  font-size: 0.72rem;
+  opacity: 0.78;
+}
+.appointment-request-section {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+}
+.appointment-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  color: white;
+}
+.appointment-heading .eyebrow {
+  color: #f2bdc6;
+}
+.appointment-heading h1 {
+  margin: 0.35rem 0 1rem;
+  font: clamp(3.2rem, 7vw, 6rem)/0.98 var(--serif);
+}
+.appointment-heading > p:last-child {
+  max-width: 620px;
+  margin-inline: auto;
+  color: #f3e5e8;
+}
+.appointment-card {
+  background: rgba(255, 250, 245, 0.98);
+}
 footer {
   background: #24191b;
   color: #f6e8e4;
@@ -758,6 +824,19 @@ footer i {
   }
   .booking {
     padding-inline: 0.7rem;
+  }
+  .booking-cta-card {
+    padding: 2.5rem 1.15rem;
+  }
+  .booking-cta-actions {
+    flex-direction: column;
+  }
+  .booking-cta-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+  .appointment-heading h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
   }
   .booking-card {
     padding: 3rem 1.2rem;

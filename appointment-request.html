@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Request a permanent makeup appointment with Julie at Everlasting Beauty PMU in Searcy, Arkansas."
+    />
+    <meta name="theme-color" content="#6f2435" />
+    <link rel="canonical" href="https://everlastingbeauty50.com/appointment-request.html" />
+    <title>Request an Appointment | Everlasting Beauty PMU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="appointment-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Everlasting Beauty home">
+        <span class="brand-script">Everlasting</span>
+        <span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="sr-only">Menu</span>
+      </button>
+      <nav id="site-nav">
+        <a href="index.html#services">Services</a><a href="index.html#work">Her Work</a
+        ><a href="index.html#about">About Julie</a><a href="gift-certificates.html">Gifts</a
+        ><a href="appointment-request.html" class="nav-cta" aria-current="page">Book Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="booking appointment-request-section section">
+        <div class="appointment-heading reveal">
+          <p class="eyebrow">BY APPOINTMENT ONLY · SEARCY, ARKANSAS</p>
+          <h1>Let’s create your<br /><em>Everlasting</em> look.</h1>
+          <p>
+            Send Julie a few details below. She’ll personally follow up to answer your questions
+            and discuss the right service for you.
+          </p>
+        </div>
+
+        <div class="booking-card appointment-card reveal">
+          <div class="booking-intro">
+            <p class="eyebrow">PERSONAL GUIDANCE</p>
+            <h2>Beauty, designed<br />around <em>you.</em></h2>
+            <p>
+              Not sure which option to choose? Select Julie’s recommendation and she’ll help you
+              decide when she follows up.
+            </p>
+            <a class="phone-link" href="tel:+15015930777">501-593-0777</a>
+            <a class="email-link" href="mailto:Everlastingbeauty50@gmail.com"
+              >Everlastingbeauty50@gmail.com</a
+            >
+            <p class="location">Searcy, Arkansas</p>
+            <aside class="deposit-note">
+              <strong>Appointment policy</strong>
+              <span
+                >A $50 nonrefundable deposit is required and will be applied to the total price at
+                the time of service.</span
+              >
+            </aside>
+          </div>
+
+          <form
+            class="contact-form"
+            name="appointment-request"
+            method="POST"
+            action="/thank-you.html"
+            data-netlify="true"
+          >
+            <input type="hidden" name="form-name" value="appointment-request" />
+            <div class="field-row">
+              <label>Full name<input type="text" name="name" autocomplete="name" required /></label>
+              <label
+                >Phone number<input type="tel" name="phone" autocomplete="tel" required
+              /></label>
+            </div>
+            <label
+              >Email address <span>(optional)</span
+              ><input type="email" name="email" autocomplete="email"
+            /></label>
+            <label
+              >Service you’re interested in
+              <select name="service" required>
+                <option value="">Choose a service</option>
+                <option>Powder Brow</option>
+                <option>Combo Brow</option>
+                <option>Brow Color Correction</option>
+                <option>Lip Blushing</option>
+                <option>Top Eyeliner</option>
+                <option>Bottom Eyeliner</option>
+                <option>Combo Eyeliner</option>
+                <option>Not sure — I’d like Julie’s recommendation</option>
+              </select>
+            </label>
+            <fieldset>
+              <legend>How should Julie contact you?</legend>
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Call" checked /> Call</label
+              >
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Text" /> Text</label
+              >
+              <label class="radio-choice"
+                ><input type="radio" name="preferred-contact" value="Email" /> Email</label
+              >
+            </fieldset>
+            <label
+              >Questions or details <span>(optional)</span
+              ><textarea
+                name="message"
+                rows="4"
+                placeholder="Tell Julie what you’re hoping to achieve or the best time to reach you."
+              ></textarea>
+            </label>
+            <button class="button cream" type="submit">Send Appointment Request</button>
+            <p class="form-note">
+              Your information is used only to respond to your appointment request.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-script">Everlasting</span
+        ><span class="brand-small">BEAUTY · PMU · BY JULIE</span>
+      </div>
+      <p>Brows <i>♥</i> Lips <i>♥</i> Eyeliner</p>
+      <p class="fine">© <span id="year"></span> Everlasting Beauty PMU by Julie</p>
+      <a
+        class="site-credit"
+        href="https://clemonswebco.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Designed by <strong>Clemons Web Co.</strong></a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

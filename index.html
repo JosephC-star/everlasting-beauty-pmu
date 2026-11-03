@@ -57,7 +57,8 @@
       </button>
       <nav id="site-nav">
         <a href="#services">Services</a><a href="#work">Her Work</a><a href="#about">About Julie</a
-        ><a href="gift-certificates.html">Gifts</a><a href="#contact" class="nav-cta">Book Now</a>
+        ><a href="gift-certificates.html">Gifts</a
+        ><a href="appointment-request.html" class="nav-cta">Book Now</a>
       </nav>
     </header>
 
@@ -66,7 +67,9 @@
         <p class="seasonal-kicker"><span aria-hidden="true">♥</span> October–December Holiday Special <span aria-hidden="true">♥</span></p>
         <p class="seasonal-offer"><strong>All services — $150 each</strong><span>Brows · Eyeliner · Lips</span></p>
         <p class="seasonal-detail">No limit during the special. Each service includes the six-week touch-up or color boost.</p>
-        <a class="seasonal-cta" href="#contact">Book the Special <span aria-hidden="true">→</span></a>
+        <a class="seasonal-cta" href="appointment-request.html"
+          >Book the Special <span aria-hidden="true">→</span></a
+        >
       </div>
     </aside>
 
@@ -369,85 +372,21 @@
         </div>
       </section>
 
-      <section class="booking section" id="contact">
-        <div class="booking-card reveal">
-          <div class="booking-intro">
-            <p class="eyebrow">BY APPOINTMENT ONLY</p>
-            <h2>Let’s talk about your<br /><em>Everlasting</em> look.</h2>
-            <p>
-              Call Julie directly or send a request below. She’ll follow up to answer questions and
-              help you choose the right service.
-            </p>
-            <a class="phone-link" href="tel:+15015930777">501-593-0777</a>
-            <a class="email-link" href="mailto:Everlastingbeauty50@gmail.com"
-              >Everlastingbeauty50@gmail.com</a
-            >
-            <p class="location">Searcy, Arkansas</p>
-            <aside class="deposit-note">
-              <strong>Appointment policy</strong
-              ><span
-                >A $50 nonrefundable deposit is required and will be applied to the total price at
-                the time of service.</span
-              >
-            </aside>
+      <section class="booking booking-cta section" id="contact">
+        <div class="booking-cta-card reveal">
+          <p class="eyebrow">BY APPOINTMENT ONLY · SEARCY, ARKANSAS</p>
+          <h2>Ready for your<br /><em>Everlasting</em> look?</h2>
+          <p>
+            Tell Julie what you’re interested in and how you’d like to be contacted. She’ll follow
+            up personally to answer questions and help you choose the right service.
+          </p>
+          <div class="booking-cta-actions">
+            <a class="button cream" href="appointment-request.html">Request an Appointment</a>
+            <a class="button outline-light" href="tel:+15015930777">Call 501-593-0777</a>
           </div>
-          <form
-            class="contact-form"
-            name="appointment-request"
-            method="POST"
-            action="/thank-you.html"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="appointment-request" />
-            <div class="field-row">
-              <label>Full name<input type="text" name="name" autocomplete="name" required /></label>
-              <label
-                >Phone number<input type="tel" name="phone" autocomplete="tel" required
-              /></label>
-            </div>
-            <label
-              >Email address <span>(optional)</span
-              ><input type="email" name="email" autocomplete="email"
-            /></label>
-            <label
-              >Service you’re interested in
-              <select name="service" required>
-                <option value="">Choose a service</option>
-                <option>Powder Brow</option>
-                <option>Combo Brow</option>
-                <option>Brow Color Correction</option>
-                <option>Lip Blushing</option>
-                <option>Top Eyeliner</option>
-                <option>Bottom Eyeliner</option>
-                <option>Combo Eyeliner</option>
-                <option>Not sure — I’d like Julie’s recommendation</option>
-              </select>
-            </label>
-            <fieldset>
-              <legend>How should Julie contact you?</legend>
-              <label class="radio-choice"
-                ><input type="radio" name="preferred-contact" value="Call" checked /> Call</label
-              >
-              <label class="radio-choice"
-                ><input type="radio" name="preferred-contact" value="Text" /> Text</label
-              >
-              <label class="radio-choice"
-                ><input type="radio" name="preferred-contact" value="Email" /> Email</label
-              >
-            </fieldset>
-            <label
-              >Questions or details <span>(optional)</span
-              ><textarea
-                name="message"
-                rows="4"
-                placeholder="Tell Julie what you’re hoping to achieve or the best time to reach you."
-              ></textarea>
-            </label>
-            <button class="button cream" type="submit">Send Appointment Request</button>
-            <p class="form-note">
-              Your information is used only to respond to your appointment request.
-            </p>
-          </form>
+          <p class="booking-policy">
+            A $50 nonrefundable deposit is required and is applied toward your service.
+          </p>
         </div>
       </section>
     </main>
@@ -467,7 +406,7 @@
         >Designed by <strong>Clemons Web Co.</strong></a
       >
     </footer>
-    <a class="mobile-book" href="tel:+15015930777">Book Now <span>♥</span></a>
+    <a class="mobile-book" href="appointment-request.html">Book Now <span>♥</span></a>
     <div class="lightbox" aria-hidden="true">
       <button aria-label="Close image">×</button><img alt="Expanded client result" />
     </div>
