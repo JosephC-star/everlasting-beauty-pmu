@@ -743,17 +743,10 @@ footer i {
     font-size: 0.7rem;
     line-height: 1.35;
   }
-  .service-card:nth-child(3) ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-  }
   .service-card:nth-child(3) li {
-    border-bottom: 0;
-    border-right: 1px solid rgba(111, 36, 53, 0.14);
-  }
-  .service-card:nth-child(3) li:last-child {
-    border-right: 0;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .comparison { padding: 0.45rem 0.45rem 1rem; }
   .comparison h3 { margin-top: 0.75rem; font-size: 1.2rem; }
