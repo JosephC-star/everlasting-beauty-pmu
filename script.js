@@ -17,7 +17,7 @@ if (menuButton && nav) {
 const grid = document.querySelector(".comparison-grid");
 const more = document.querySelector(".gallery-more");
 const galleryCards = [...document.querySelectorAll(".comparison")];
-const galleryLimit = window.matchMedia("(max-width: 580px)").matches ? 8 : 4;
+const galleryLimit = window.matchMedia("(max-width: 580px)").matches ? 2 : 4;
 let currentFilter = "all";
 let galleryExpanded = false;
 
