@@ -402,9 +402,6 @@ button {
   margin: 0;
   overflow: hidden;
 }
-.wide-pair.eyeliner-wide-one figure {
-  aspect-ratio: 2.8 / 1;
-}
 .wide-pair.eyeliner-wide-two figure {
   aspect-ratio: 2.1 / 1;
 }
