@@ -402,6 +402,15 @@ button {
   margin: 0;
   overflow: hidden;
 }
+.wide-pair.eyeliner-wide-two figure {
+  aspect-ratio: 2.1 / 1;
+}
+.wide-pair.eyeliner-wide-three figure {
+  aspect-ratio: 3.25 / 1;
+}
+.wide-pair.brow-wide figure {
+  aspect-ratio: 2.15 / 1;
+}
 .pair img {
   height: 100%;
   object-fit: cover;
@@ -641,10 +650,11 @@ footer i {
   display: flex;
 }
 .lightbox img {
-  max-width: 1100px;
-  max-height: 88vh;
+  max-width: min(1100px, calc(100vw - 4rem));
+  max-height: calc(100vh - 4rem);
   object-fit: contain;
   width: auto;
+  height: auto;
 }
 .lightbox button {
   position: absolute;
@@ -816,6 +826,16 @@ footer i {
   }
   .comparison { padding: 0.45rem 0.45rem 1rem; }
   .comparison h3 { margin-top: 0.75rem; font-size: 1.2rem; }
+  .wide-pair {
+    grid-template-columns: 1fr;
+  }
+  .lightbox {
+    padding: 1rem;
+  }
+  .lightbox img {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+  }
   .about-collage {
     padding: 0 12% 14% 0;
   }
