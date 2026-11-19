@@ -411,6 +411,9 @@ button {
 .wide-pair.brow-wide figure {
   aspect-ratio: 2.15 / 1;
 }
+.wide-pair.brow-liner-wide figure {
+  aspect-ratio: 3 / 1;
+}
 .pair img {
   height: 100%;
   object-fit: cover;
