@@ -23,7 +23,7 @@ let galleryExpanded = false;
 
 function updateGallery() {
   const matchingCards = galleryCards.filter(
-    (card) => currentFilter === "all" || card.dataset.category === currentFilter,
+    (card) => currentFilter === "all" || card.dataset.category.split(" ").includes(currentFilter),
   );
 
   galleryCards.forEach((card) => {
